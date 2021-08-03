@@ -43,7 +43,7 @@ router.route("/login")
 
 router.get("/logout", (req, res) => {
     // 세션만 비우게 되면 req.session.memId이 삭제되고 회원정보가 유지x (로그아웃)
-    req.session.destory();
+    req.session.destroy();
 
     // 로그아웃 > 로그인 페이지로 이동
     return res.redirect("/member/login");
